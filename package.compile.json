@@ -1,0 +1,38 @@
+{
+  "name": "junedns-server",
+  "version": "2.1.1",
+  "author": "Eduardo Ruiz <eruiz@dataclick.es> (https://www.dataclick.es)",
+  "description": "Dataclick Olimpo - JuNeDNS Server",
+  "keywords": [
+    "dns", "dns server", "dnssec", "spf", "dkim", "dmarc", "dns authoritative", "dns recursive", "tls over https", "dot", "dns over https", "doh", "letsencrypt", "ipv6", "udp"
+  ],
+  "license": "MIT",
+  "main": "server.js",
+  "bin": "server.js",
+  "dependencies": {
+    "mysql": ">=2.18.1",
+    "pkg": "^5.8.1"
+  },
+  "homepage": "https://www.junedns.com",
+  "bugs": {
+    "url": "https://github.com/EduardoRuizM/junedns-server/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EduardoRuizM/junedns-server.git"
+  },
+  "pkg": {
+    "targets": [
+      "node18-linux-x64",
+      "node18-win-x64",
+      "node18-macos-x64"
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "pkg -t node18-linux-x64,node18-win-x64,node18-macos-x64 --out-path dist --options no-deprecation,no-warnings .",
+    "build-linux": "pkg -t node18-linux-x64 --out-path dist --options no-deprecation,no-warnings .",
+    "build-win": "pkg -t node18-win-x64 --out-path dist --options no-deprecation,no-warnings .",
+    "build-macos": "pkg -t node18-macos-x64 --out-path dist --options no-deprecation,no-warnings ."
+  }
+}

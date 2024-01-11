@@ -1,0 +1,26 @@
+{
+  "name": "junedns-server",
+  "version": "2.1.1",
+  "author": "Eduardo Ruiz <eruiz@dataclick.es> (https://www.dataclick.es)",
+  "description": "Dataclick Olimpo - JuNeDNS Server",
+  "keywords": [
+    "dns", "dns server", "dnssec", "spf", "dkim", "dmarc", "dns authoritative", "dns recursive", "tls over https", "dot", "dns over https", "doh", "letsencrypt", "ipv6", "udp"
+  ],
+  "license": "MIT",
+  "main": "server.js",
+  "dependencies": {
+    "mysql": ">=2.18.1"
+  },
+  "homepage": "https://www.junedns.com",
+  "bugs": {
+    "url": "https://github.com/EduardoRuizM/junedns-server/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EduardoRuizM/junedns-server.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"Error: rename package.json and use package.compile.json to compile JuNeDNS Server\" && exit 1"
+  }
+}

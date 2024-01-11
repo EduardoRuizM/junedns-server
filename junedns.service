@@ -1,0 +1,13 @@
+[Unit]
+Description=JuNeDNS Server
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/etc/junedns/junedns			#Binary execution
+#ExecStart=/usr/bin/node /etc/junedns/server.js	#Source code execution
+Restart=always
+TimeoutStartSec=0
+
+[Install]
+WantedBy=default.target
