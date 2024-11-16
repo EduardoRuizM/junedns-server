@@ -509,11 +509,11 @@ https://github.com/EduardoRuizM/junedns-noip
 
 # Trademarks©️
 **Dataclick Olimpo JuNeDNS**
-- [Dataclick.es](https://www.dataclick.es "Dataclick.es") is a software development company since 2016.
+- [Dataclick.es](https://www.dataclick.es "Dataclick.es") is a software development company since 2006.
 - [Olimpo](https://www.dataclick.es/en/technology-behind-olimpo.html "Olimpo") is a whole solution software to manage all domains services such as hosting services and to create Webs in a server.
 - [JuNe](https://just-needed.com "JuNe") / JUst NEeded Philosophy, available software and development solutions.
 - [JuNeDNS](https://github.com/EduardoRuizM/junedns-server "JuNeDNS") is a part of Dataclick Olimpo domains management for DNS service, released to Internet community.
-- Feel free to use JuNeDNS acording MIT license respecting the brand and image logotype that you can use.
+- Feel free to use JuNeDNS according MIT license respecting the brand and image logotype that you can use.
 
 # Import from PowerDNS
 Using SQL sentences to export domains / records, and with access to both databases (adjust names).

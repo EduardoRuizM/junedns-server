@@ -1,6 +1,6 @@
 {
   "name": "junedns-server",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "author": "Eduardo Ruiz <eruiz@dataclick.es> (https://www.dataclick.es)",
   "description": "Dataclick Olimpo - JuNeDNS Server",
   "keywords": [
@@ -11,7 +11,7 @@
   "dependencies": {
     "mysql": ">=2.18.1"
   },
-  "homepage": "https://www.junedns.com",
+  "homepage": "https://github.com/EduardoRuizM/junedns-server",
   "bugs": {
     "url": "https://github.com/EduardoRuizM/junedns-server/issues"
   },
