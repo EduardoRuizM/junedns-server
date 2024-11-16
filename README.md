@@ -1,20 +1,20 @@
 <p align="center">
-  <a href="https://junedns.com"><img src="logo.png" title="JuNeDNS Server" width="570" height="300" /></a>
+  <a href="https://github.com/EduardoRuizM/junedns-server"><img src="logo.png" title="JuNeDNS Server" width="570" height="300"></a>
 </p>
 <h1 align="center">
   <a href="https://github.com/EduardoRuizM/junedns-server">EduardoRuizM/junedns-server</a>
 </h1>
 <p align="center">
-  Dataclick Olimpo <a href="https://junedns.com">☀️JuNeDNS Server</a>
+  Dataclick Olimpo <a href="https://github.com/EduardoRuizM/junedns-server">☀️JuNeDNS Server</a>
   Safe, Lightweight and Full DNS Server ideal for single or hosting servers
-  https://www.junedns.com
 </p>
 
-# [☀️JuNeDNS Server](https://junedns.com "JuNeDNS Server")
+# [☀️JuNeDNS Server](https://github.com/EduardoRuizM/junedns-server "JuNeDNS Server")
 ## 🌐 Full DNS Server for single or hosting multi-domains
 
 JuNeDNS Server is a lightweight DNS authoritative and recursive server created in Node.js with a fully functionality and easy installation and use.
-![10 Kb](https://img.shields.io/github/size/EduardoRuizM/junedns-server/server.js)
+
+![10 Kb](https://img.shields.io/github/size/EduardoRuizM/junedns-server/server.js) ![NPM Downloads](https://img.shields.io/npm/dt/junedns-server)
 
 - Use a **MySQL/MariaDB** database to store information about your domains and records.
 - UDP/TCP compatible (port 53), DNS-over-TLS (DoT) and DNS-over-HTTPS (DoH).
@@ -24,20 +24,31 @@ JuNeDNS Server is a lightweight DNS authoritative and recursive server created i
 - Dynamic IP to a static host (No-IP).
 - Maybe used as general DNS server forwarding resolve requests if domain is not hosted.
 - Binaries compiled (x64 bits) for: 🐧Linux, 🪟 Windows and 🍎MacOS.
-- DNSSEC, DKIM, DMARC and service running in IPv4/IPv6 in [PRO version](https://junedns.com "PRO version").
+- DNSSEC, DKIM, DMARC and service running in IPv4/IPv6.
 - Use [JuNeDNS Backend](https://github.com/EduardoRuizM/junedns-backend "JuNeDNS Backend") & [JuNeDNS Frontend](https://github.com/EduardoRuizM/junedns-frontend "JuNeDNS Frontend") & [JuNeDNS No-IP](https://github.com/EduardoRuizM/junedns-noip "JuNeDNS No-IP") for a whole DNS solution.
 
 ### Why JuNeDNS Server?
+
 ✔ All DNS server features that a DNS server requires.
+
 ✔ Safe, lightweight, and easy installation.
+
 ✔ Detailed information about JuNeDNS functionallity.
+
 ✔ All about domains DNS service/protocol knowledge you need are here in this documentation.
+
 ✔ Support for IDN (internationalized domain name) for non-ASCII characters (coding in Punycode).
+
 ✔ You don´t need anything else in a DNS server system (protocols/records that really unused, bloatware).
+
 ✔ So, perfect for advanced or beginners SysAdmins.
+
 ✔ Just insert domains and records into database without restart DNS service.
+
 ✔ Forget about complicated text config files for DNS zones.
+
 ✔ Control Your DNS directly in Your server.
+
 ✔ Do not depend on external DNS like Cloudflare that can be attacked and disabled, or with security issues like *Authenticated Origin Pulls*, causing your domains not to resolve for a while - [Downdetector](https://downdetector.com/status/cloudflare/ "Downdetector").
 
 # Author
@@ -172,7 +183,8 @@ Install dependencies `npm install` (JuNe 1 dependence: MySQL).
     - Create service `sc create "JuNeDNS Server" binPath="NodeJS_PATH\node JuNeDNS_PATH\server.js"` start with `net start "JuNeDNS Server"`
 
 #### 3.2 Running from binaries (x64 bits)
-Download and decompress your version: [🐧Linux](https://junedns.com/file/junedns-server-linux.zip "Linux") (20 Mb), [🪟 Windows](https://junedns.com/file/junedns-server-win.zip "Windows") (16 Mb) or [🍎MacOS](https://junedns.com/file/junedns-server-macos.zip "MacOS") (20 Mb).
+Download and decompress your version: [🐧Linux](https://drive.google.com/file/d/1trMw2La5ctz45J8D1q9zw7ficMR4gFGs/view?usp=sharing "Linux") (20 Mb), [🪟 Windows](https://drive.google.com/file/d/1JBNyxFWd30J9pFb5wPX-dfh99A3KKUUu/view?usp=sharing "Windows") (17 Mb) or [🍎MacOS](https://drive.google.com/file/d/19kUNRZ6_1Cs-M5Nx0FldoJ6qKrDKNgBQ/view?usp=sharing "MacOS") (20 Mb).
+
 Create [junedns.conf](./junedns.conf "junedns.conf")
 
 - **Running from command line** (for example to debug with **log=3**)
@@ -271,7 +283,7 @@ INSERT INTO records SET domain_id=1, name='mydomain.tld', type='MX', content='al
 ```
 
 ### DKIM record sample
-Available in [PRO version](https://junedns.com "PRO version"), automatically added.
+Automatically added.
 ```
 INSERT INTO records SET domain_id=1, name='auth._domainkey.mydomain.tld', type='TXT', content='v=DKIM1; h=rsa-sha256; k=rsa; p=DKIM_KEY_HERE';
 ```
@@ -351,7 +363,7 @@ With this technique you could combine your Website and DoH in the same server wi
 Test it (to output file): `curl -H "accept: application/dns-json" "http://127.0.0.1:8085/dns-query?name=mydomain.tld&type=A" --output file.bin`
 
 # DNSSEC
-Available in [PRO version](https://junedns.com "PRO version"), **dnssec=true** in `junedns.conf`
+**dnssec=true** in `junedns.conf`
 Domain Name System Security Extensions, provides cryptographic authentication of DNS records, according to [RFC 4035](https://www.ietf.org/rfc/rfc4035.txt "RFC 4035"), with Authenticated Data (AD) and Checking Disabled (CD) flags on header.
 ZSK (Zone Signing Keys) and KSK (Key Signing Keys) private and public DNSSEC keys will be created and inserted into database automatically on the first resolve request.
 DS, DNSKEY and RRSIGs records are dynamically generated by JuNeDNS Server, so they don´t appear in records database table.
@@ -364,7 +376,6 @@ mydomain.tld.        3600    IN  RRSIG   A 8 2 3600 20230715080515 2023061508051
 - Show DS (Delegation Signer) records using `dig @127.0.0.1 DS mydomain.tld`
 
 # DKIM
-Available in [PRO version](https://junedns.com "PRO version").
 Domain Keys Identified Mail, for Email authentication with digital signature to prevent spoofing, phishing and spam.
 Install from [OpenDKIM](http://www.opendkim.org "OpenDKIM") and configure it.
 DKIM signature and setup will be created and inserted into database automatically on the first resolve request, so it´s mandatory to config OpenDKIM path for domains, binary to GenKey, and DKIM selector (same as Selector in opendkim.conf):
@@ -489,8 +500,11 @@ iptables -A INPUT -p udp –dport 53 -m hashlimit
 ```
 
 # JuNeDNS Backend & Frontend & No-IP
+
 https://github.com/EduardoRuizM/junedns-backend
+
 https://github.com/EduardoRuizM/junedns-frontend
+
 https://github.com/EduardoRuizM/junedns-noip
 
 # Trademarks©️
@@ -498,7 +512,7 @@ https://github.com/EduardoRuizM/junedns-noip
 - [Dataclick.es](https://www.dataclick.es "Dataclick.es") is a software development company since 2016.
 - [Olimpo](https://www.dataclick.es/en/technology-behind-olimpo.html "Olimpo") is a whole solution software to manage all domains services such as hosting services and to create Webs in a server.
 - [JuNe](https://just-needed.com "JuNe") / JUst NEeded Philosophy, available software and development solutions.
-- [JuNeDNS](https://junedns.com "JuNeDNS") is a part of Dataclick Olimpo domains management for DNS service, released to Internet community.
+- [JuNeDNS](https://github.com/EduardoRuizM/junedns-server "JuNeDNS") is a part of Dataclick Olimpo domains management for DNS service, released to Internet community.
 - Feel free to use JuNeDNS acording MIT license respecting the brand and image logotype that you can use.
 
 # Import from PowerDNS
@@ -507,11 +521,11 @@ Truncate JuNeDNS tables to start from scratch:
 ```
 DELETE FROM junedns.domains;
 INSERT INTO junedns.domains (id, name, nopunycode, created)
-SELECT id, name, name, CURRENT_DATE FROM powerdns.domains;
+  SELECT id, name, name, CURRENT_DATE FROM powerdns.domains;
 
 DELETE FROM junedns.records;
 INSERT INTO junedns.records (domain_id, name, type, content, ttl, disabled)
-SELECT domain_id, name, type, TRIM(CONCAT_WS('', content, ' ', prio)), ttl, disabled FROM powerdns.records;
+  SELECT domain_id, name, type, TRIM(CONCAT_WS('', content, ' ', prio)), ttl, disabled FROM powerdns.records;
 ```
 
 # Files
@@ -526,7 +540,7 @@ SELECT domain_id, name, type, TRIM(CONCAT_WS('', content, ' ', prio)), ttl, disa
 | package.compile.json | package.json file to compile binaries in folder **dist/** |
 | package.json | Original package.json |
 | README.md | Full guide about JuNeDNS and DNS service/protocol in markdown |
-| server.js | Lightweighted JuNeDNS Server main file, just **20 Kb** (JuNe Philosophy) |
+| server.js | Lightweighted JuNeDNS Server main file, just **10 Kb** (JuNe Philosophy) |
 
 # Comparison
 |   | JuNeDNS | PowerDNS | Diff % |
@@ -534,4 +548,3 @@ SELECT domain_id, name, type, TRIM(CONCAT_WS('', content, ' ', prio)), ttl, disa
 | **Source Code** | 63 Kb | 7.503 Kb | 0,8 % |
 | **Files / Folders** | 5 / 1 | 663 / 35 | 0,7 % / 2,8 %  |
 | **Compiled** | 50 Mb | 394 Mb | 13 % |
-| **Memory pmap** | 50 Mb | 1.406.492 Kb | 13 % |
